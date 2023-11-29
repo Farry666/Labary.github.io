@@ -1,0 +1,25 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#HeaderFrame{
+    width: 100%;
+    height: 15%;
+}
+#LeftFrame{
+    width: 24%;
+    height: 75%;
+}
+#RightFrame{
+    width: 75%;
+    height: 75%;
+}
+#BottomFrame{
+    width: 100%;
+    height: 10%;
+}
+
+
+
+
+
