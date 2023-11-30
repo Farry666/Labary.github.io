@@ -1,0 +1,111 @@
+body,html{
+height: 100%;
+margin: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+scroll-behavior: smooth;
+}
+
+*{
+    padding: auto;
+    margin: auto;
+}
+
+#Logo{
+    width: 140px;
+    height: 110px;
+    background:url(Logo.png);
+    background-size: 125px;
+    background-repeat: no-repeat;
+   
+}
+.navigation a{
+    padding-left: 20%;
+}
+.navigation{
+    width: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+.Nav{
+height: 100%;
+}
+.menu{
+    background-color: #6B6B6B;
+    width: 140px;
+    height: 330px;
+    position: fixed;
+    border-radius: 2%;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+.container{
+    padding: 40px;
+    padding-left: 7px;
+    margin-left: 7px;
+    width: 14px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Katalog{
+    border: 1px solid black;
+width: 70%;
+border-radius: 2px;
+}
+h1{
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    margin-top: 0px;
+}
+button{
+    width: 250px;
+    height: 40px;
+    background-color: #949494;
+    border-radius: 7%;
+}
+button:hover{
+    background-color: black;
+    color: #949494;
+}
+img:hover{
+    transition: 1.3s;
+    transform: translateY(-5px);
+}
+img:not(:hover){
+    transition: 1.3s; 
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card img{
+    width: 250px;
+    height: 250px; 
+}
+.card{
+    width: 350px;
+    height: 300px;
+}
+.footer{
+background-color: black;
+text-align: center;
+color: white;
+width: 70%;
+border: 1px solid black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.header a:hover{
+    color: #6B6B6B;
+}
+a:hover{
+    color: #F0F0F0;
+}
