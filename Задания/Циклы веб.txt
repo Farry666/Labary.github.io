@@ -1,0 +1,51 @@
+/*for(let i = 1 ;i<=5;i++){
+  for(let j = 1 ;j<=5;j++){
+  console.log(i**j);
+  }
+}   №1(19)*/
+
+/*const obj = {
+  name: 'John',
+  age: 30,
+  city: 'New York'
+};
+
+for (let prop in obj) {
+  if (typeof obj[prop] === 'string') {
+    console.log(`${prop}: ${obj[prop]}`);
+  }
+}    #2(13)*/
+
+
+const mergeSort = (arr) => {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+const  merge = (left, right) => {
+  let resultArray = [],
+    leftIndex = 0,
+    rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      resultArray.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      resultArray.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+  return resultArray.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+const arr = [5, 3, 8, 4, 2, 7, 1, 6];
+const sortedArr = mergeSort(arr);
+console.log(sortedArr);
+

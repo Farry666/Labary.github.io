@@ -1,0 +1,15 @@
+let obj = [
+  {name:'alice', age:23},
+  {name:'jhon', age:24},
+  {name:'mark', age:17},
+  {name:'stev', age:23},
+]
+
+const groupByProperty = (arr, prop) =>{
+for(let i = 0; i < obj.length; i++){
+if(obj[i].age == prop){
+  console.log(obj[i])
+}
+}
+}
+groupByProperty(obj,23);

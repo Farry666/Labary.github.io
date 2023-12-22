@@ -1,0 +1,57 @@
+class SmartHomeSystem {
+  constructor() {
+    this.smartDevices = [];
+    this.automationScenarios = {};
+  }
+
+  addSmartDevice(device) {
+    this.smartDevices.push(device);
+  }
+
+  controlSmartDevice(deviceId, action) {
+    const device = this.smartDevices.find(device => device.id === deviceId);
+    if (device) {
+      switch (action) {
+        case 'TurnOn':
+          device.status = 'On';
+          break;
+        case 'TurnOff':
+          device.status = 'Off';
+          break;
+      }
+      console.log('Устройство изменено на состояние:', device.status);
+    } else {
+      console.log('Устройство не найдено');
+    }
+  }
+
+  configureAutomationScenarios(scenarios) {
+    this.automationScenarios = scenarios;
+  }
+
+  remoteControl(deviceId, action) {
+    const device = this.smartDevices.find(device => device.id === deviceId);
+    if (device) {
+      switch (action) {
+        case 'TurnOn':
+          device.status = 'On';
+          break;
+        case 'TurnOff':
+          device.status = 'Off';
+          break;
+      }
+      console.log('Устройство изменено на состояние:', device.status);
+    } else {
+      console.log('Устройство не найдено');
+    }
+  }
+  }
+
+
+const smartHomeSystem = new SmartHomeSystem();
+smartHomeSystem.addSmartDevice({ id: 1, type: "Light", status: "Off" });
+smartHomeSystem.controlSmartDevice(1, "TurnOn");
+smartHomeSystem.configureAutomationScenarios({ timeBased: { lightsOn: "18:00", lightsOff: "22:00" } });
+smartHomeSystem.remoteControl(1, "TurnOff");
+console.log(smartHomeSystem.automationScenarios.timeBased)
+console.log(smartHomeSystem.smartDevices[0])
