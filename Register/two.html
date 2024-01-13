@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Autorizate</title>
+  </head>
+  <body>
+    <div class="container">
+    <form id="myForms">
+      <input type="email" id="email" name="email" placeholder="Email" />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      />
+      <button type="submit">Войти</button>
+    </form>
+  </div>
+    <script>
+      document
+        .getElementById("myForms")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          localStorage.getItem(email, password);
+          for (let i = 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            if (password == localStorage.getItem(key) && email == key) {
+              alert("Вы успешно зашли");
+              window.location.href = "https://music.yandex.ru/users/roma.partikevich/playlists/1002";
+              break
+            }
+            else {alert("Не верный логин или пароль"); break}        
+          }
+        });
+    </script>
+  </body>
+</html>

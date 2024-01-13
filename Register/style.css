@@ -1,0 +1,41 @@
+#Next{
+    display: none; 
+    text-decoration: none;
+    color: black;
+    width: 340px;
+    height: 55px;
+}
+body{
+    background-image: url('https://134706.selcdn.ru/v1/SEL_39171/site-production-public/system/image/file/8534388/vehicle_slider_1-3%402x.jpg');
+    background-size: 100%;
+    background-position-y: -300px;
+}
+.container, .container1{
+    width: 400px;
+    height: 550px;
+    margin-top: 200px;
+    background-color: #4B0BF4;
+    border: 5px solid #F51511;
+    border-radius: 20px;
+}
+.container1{
+    width: 400px;
+    height: 350px;  
+}
+*{
+    margin: auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+input, button{
+   margin: 15px; 
+   height: 60px;
+   border-radius: 15px;
+   border: 5px solid #F51511;
+}
+button{
+    cursor: pointer;
+}
